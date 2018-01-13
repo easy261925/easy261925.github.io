@@ -118,7 +118,7 @@
 
 
 
-  <title>NodeJS 学习之路 | 万事如意</title>
+  <title> | 万事如意</title>
   
 
 
@@ -245,7 +245,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/13/NodeJS-学习之路/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/05/关于Array的ES5部分方法的实现/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="万事如意">
@@ -262,7 +262,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">NodeJS 学习之路</h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -274,7 +274,7 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-13T11:42:34+08:00">2018-01-13</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-05T20:39:34+08:00">2018-01-05</time>
             
 
             
@@ -310,7 +310,87 @@
       
 
       
-        
+        <h1 id="关于Array的ES5部分方法的实现"><a href="#关于Array的ES5部分方法的实现" class="headerlink" title="关于Array的ES5部分方法的实现"></a>关于Array的ES5部分方法的实现</h1><blockquote>
+<p>forEach</p>
+</blockquote>
+<pre><code>
+if (typeof Array.prototype.forEach !== &quot;function&quot;) {
+    Array.prototype.myForEach = function (fn) {
+        for (var i = 0; i &lt; this.length; i++) {
+            // console.log(Object.prototype);
+            // console.log(Object.prototype.hasOwnProperty.call(this, i))
+            if (typeof fn === &quot;function&quot;) {
+                if (Object.prototype.hasOwnProperty.call(this, i)) {
+                    fn.call(this,this[i], i, this);
+                }
+            }
+            else {
+                throw new Error(fn + &quot; is not a function&quot;);
+            }
+        }
+    }
+ }
+var array = [1, 2, 3, 4, 5, 6];
+array.myForEach(function (value, index, array) {
+    console.log(value);
+    console.log(index);
+    console.log(array);
+})
+</code></pre>
+
+<blockquote>
+<p>map</p>
+</blockquote>
+<pre><code>
+if (typeof Array.prototype.map !== &quot;function&quot;) {
+Array.prototype.myMap = function (fn) {
+        var temp = [];
+        for (var i = 0; i &lt; this.length; i++) {
+            if (typeof fn === &quot;function&quot;) {
+                if (Object.prototype.hasOwnProperty.call(this, i)) {
+                    temp.push(fn.call(this, this[i], i, this));
+                }
+            } else {
+                throw new Error(fn + &quot; is not a function&quot;);
+            }
+        }
+        return temp;
+    }
+}
+var arr1 = [1, 2, 3, 4, 5, 6];
+var arr2 = arr1.myMap(function (value) {
+    return value * 2;
+})
+console.log(arr2);
+</code></pre>
+
+<blockquote>
+<p>filter</p>
+</blockquote>
+<pre><code>
+if(typeof Array.prototype.filter !== &quot;function&quot;){
+    Array.prototype.myFilter = function(fn){
+        var temp = [];
+        for(var i=0;i&lt;this.length;i++){
+            if(typeof fn === &quot;function&quot;){
+                if(Object.prototype.hasOwnProperty.call(this,i)){
+                    if(fn.call(this,this[i])){
+                        temp.push(this[i]);
+                    }
+                }
+            }
+        }
+        return temp;
+    }
+ }
+var arr1 = [1,2,3,4,45,89,123,45,8,10];
+var arr2 = arr1.myFilter(function(value){
+    return value &lt; 5;
+})
+console.log(arr2);
+</code></pre>
+
+
       
     </div>
     
@@ -334,15 +414,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/12/2018前端面试题总结/" rel="next" title="2018前端面试题总结">
-                <i class="fa fa-chevron-left"></i> 2018前端面试题总结
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/11/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -391,8 +471,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -454,6 +543,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于Array的ES5部分方法的实现"><span class="nav-number">1.</span> <span class="nav-text">关于Array的ES5部分方法的实现</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
