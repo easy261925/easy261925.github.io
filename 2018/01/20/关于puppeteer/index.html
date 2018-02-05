@@ -121,7 +121,7 @@
 
 
 
-  <title>2018前端面试题总结 | 万事如意</title>
+  <title>关于puppeteer | 万事如意</title>
   
 
 
@@ -218,7 +218,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/12/2018前端面试题总结/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/20/关于puppeteer/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="万事如意">
@@ -235,7 +235,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">2018前端面试题总结</h1>
+          <h1 class="post-title" itemprop="name headline">关于puppeteer</h1>
         
 
         <div class="post-meta">
@@ -247,7 +247,7 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-12T19:48:25+08:00">2018-01-12</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-20T15:23:24+08:00">2018-01-20</time>
             
 
             
@@ -255,6 +255,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Node/" itemprop="url" rel="index">
+                    <span itemprop="name">Node</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -283,37 +305,32 @@
       
 
       
-        <p><img src="http://onh0umlhz.bkt.clouddn.com/0524themetitle.PNG" alt="title"></p>
-<h2 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h2><h3 id="一、HTTP协议头含有哪些重要的部分，HTTP状态码"><a href="#一、HTTP协议头含有哪些重要的部分，HTTP状态码" class="headerlink" title="一、HTTP协议头含有哪些重要的部分，HTTP状态码"></a>一、HTTP协议头含有哪些重要的部分，HTTP状态码</h3><h4 id="Request-Headers-请求头"><a href="#Request-Headers-请求头" class="headerlink" title="Request Headers (请求头)"></a>Request Headers (请求头)</h4><p>Accept : 浏览器可以接受的媒体类型</p>
-<p>Accept-Encoding :  浏览器申明自己接收的编码方法，通常指定压缩方法，是否支持压缩，支持什么压缩方法（gzip，deflate），（注意：这不是只字符编码）</p>
-<p>Accept-Language : 浏览器申明自己接收的语言。 </p>
-<p>User-Agent : 告诉HTTP服务器， 客户端使用的操作系统和浏览器的名称和版本.</p>
-<p>Accept-Charset : 浏览器申明自己接收的字符集，这就是本文前面介绍的各种字符集和字符编码，如gb2312，utf-8（通常我们说Charset包括了相应的字符编码方案）</p>
-<p>Connection :</p>
-<ol>
-<li>Connection: keep-alive   当一个网页打开完成后，客户端和服务器之间用于传输HTTP数据的TCP连接不会关闭，如果客户端再次访问这个服务器上的网页，会继续使用这一条已经建立的连接</li>
-<li>Connection: close  代表一个Request完成后，客户端和服务器之间用于传输HTTP数据的TCP连接会关闭， 当客户端再次发送Request，需要重新建立TCP连接。</li>
-</ol>
-<p>Cookie: :  最重要的header, 将cookie的值发送给HTTP 服务器</p>
-<p>Host : 请求报头域主要用于指定被请求资源的Internet主机和端口号，它通常从HTTP URL中提取出来的</p>
-<p>Referer : 提供了Request的上下文信息的服务器，告诉服务器我是从哪个链接过来的，比如从我主页上链接到一个朋友那里，他的服务器就能够从HTTP Referer中统计出每天有多少用户点击我主页上的链接访问他的网站。</p>
-<h3 id="Response-Header-响应头"><a href="#Response-Header-响应头" class="headerlink" title="Response Header (响应头)"></a>Response Header (响应头)</h3><h4 id="Cache"><a href="#Cache" class="headerlink" title="Cache :"></a>Cache :</h4><p>Date : 生成消息的具体时间和日期</p>
-<p>Expires : 浏览器会在指定过期时间内使用本地缓存</p>
-<p>Content-Encoding : WEB服务器表明自己使用了什么压缩方法（gzip，deflate）压缩响应中的对象。</p>
-<p>Content-Length : 指明实体正文的长度，以字节方式存储的十进制数字来表示。在数据下行的过程中，Content-Length的方式要预先在服务器中缓存所有数据，然后所有数据再一股脑儿地发给客户端。</p>
-<p>Content-Type : WEB服务器告诉浏览器自己响应的对象的类型和字符集,</p>
-<h3 id="HTTP状态码"><a href="#HTTP状态码" class="headerlink" title="HTTP状态码"></a>HTTP状态码</h3><h4 id="常见"><a href="#常见" class="headerlink" title="常见"></a>常见</h4><ul>
-<li>200 - 请求成功</li>
-<li>301 - 资源（网页等）被永久转移到其它URL</li>
-<li>404 - 请求的资源（网页等）不存在</li>
-<li>500 - 内部服务器错误</li>
+        <h3 id="介绍一下Puppeteer"><a href="#介绍一下Puppeteer" class="headerlink" title="介绍一下Puppeteer"></a>介绍一下Puppeteer</h3><blockquote>
+<p>Puppeteer是一个node库，他提供了一组用来操纵Chrome的API（默认headless也就是无UI的chrome，也可以配置为有UI<br>有点类似于PhantomJS，但Puppeteer是Chrome官方团队进行维护的，前景更好。<br>使用Puppeteer，相当于同时具有Linux和Chrome的能力，应用场景会非常多。就爬虫领域来说，远比一般的爬虫工具功能更丰富，性能分析、自动化测试也不在话下，今天先探讨爬虫相关</p>
+</blockquote>
+<h4 id="详情请看Puppeteer官方文档"><a href="#详情请看Puppeteer官方文档" class="headerlink" title="详情请看Puppeteer官方文档"></a><a href="https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-browser" target="_blank" rel="noopener">详情请看Puppeteer官方文档</a></h4><p>阅读以下内容，可以实现爬取<a href="http://pianke.me" target="_blank" rel="noopener">片刻网</a>的首页数据。</p>
+<h4 id="Puppeteer-几个重要功能"><a href="#Puppeteer-几个重要功能" class="headerlink" title="Puppeteer 几个重要功能"></a>Puppeteer 几个重要功能</h4><ul>
+<li>可以抓取网站内容</li>
+<li>可以自动化表单提交、搜索网络内容、UI测试等</li>
+<li>获取网页生成的PDF、图片、视频等资源</li>
 </ul>
-<p>1XX : 信息，服务器收到请求，需要请求者继续执行操作</p>
-<p>2XX : 成功，操作被成功接收并处理</p>
-<p>3XX : 重定向，需要进一步的操作以完成请求</p>
-<p>4XX : 客户端错误，请求包含语法错误或无法完成请求</p>
-<p>5XX : 服务器错误，服务器在处理请求的过程中发生了错误</p>
-
+<p>接下来的操作基于 Node 环境</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir test &amp;&amp; cd test</span><br><span class="line">npm init</span><br><span class="line">npm install puppeteer</span><br></pre></td></tr></table></figure>
+<!--上述命令墙内用户可能会有问题，建议科学上网-->
+<h4 id="Puppeteer-基本用法"><a href="#Puppeteer-基本用法" class="headerlink" title="Puppeteer 基本用法"></a>Puppeteer 基本用法</h4><p>1.使用<code>puppeteer.launch()</code>运行puppeteer，他会return一个promise，使用then方法获取browser实例，<a href="https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-browser" target="_blank" rel="noopener">Browser API</a>.</p>
+<p>2.拿到browser实例后，通过<code>browser.newPage()</code>方法，可以得到一个page实例，<a href="https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-page" target="_blank" rel="noopener">Page API</a>.</p>
+<p>3.使用<code>page.goto()</code>方法，<a href="http://es6.ruanyifeng.com/#README" target="_blank" rel="noopener">跳转至ES6标准入门</a>.</p>
+<p>4.在<code>page.evaluate()</code>方法中注册回调函数，并分析dom结构，从下图可以进行详细分析，并通过<code>document.querySelectorAll(&#39;ol li a&#39;)</code>拿到想要获取的内容.</p>
+<h4 id="具体代码"><a href="#具体代码" class="headerlink" title="具体代码"></a>具体代码</h4><p><a href="https://github.com/easy261925/Puppeteer" target="_blank" rel="noopener">点我查看详细代码</a></p>
+<p>或 <code>git clone git@github.com:easy261925/Puppeteer.git</code></p>
+<h4 id="说一下我遇到坑吧"><a href="#说一下我遇到坑吧" class="headerlink" title="说一下我遇到坑吧"></a>说一下我遇到坑吧</h4><ol>
+<li>在配置环境的时候由于网络的原因，在安装 Puppetee 的时候可能会无法安装,<a href="https://pan.baidu.com/s/1dIMKjk" target="_blank" rel="noopener"> node_modules 百度云下载地址 </a> 密码: bxhy. 不需要 <code>npm i</code>了, 下载完后直接使用<code>node getData.js</code>即可.</li>
+<li>代码的实现过程, 在看过网上很多关于 Puppeteer 技术文章和同学大力帮助之后，也算把想要的结果得到了，但是关于 async Promise await 等函数以及 ES6 Array<br>的新用法还不是特别清楚， 本人打算学习<a href="http://es6.ruanyifeng.com/#README" target="_blank" rel="noopener"> 阮一峰老师的ES6 </a>之后, 在来详细补充其原理.</li>
+<li>爬取到的数据是通过 class 名，找到里面元素的 src/style/innerText，但是获取到的数据格式为:<code>img:[&#39;1.jpg&#39;,&#39;2.jpg&#39;];title:[ &#39;AAAAAAA&#39;,&#39;BBBBBBB&#39;]</code> 为了使用方便，我们对数据做了一些调整，让它变为<code>[{item1:[&#39;1.jpg&#39;,&#39;AAAAAAA&#39;]},{item1:[&#39;2.jpg&#39;,&#39;BBBBBBB&#39;]}]</code>,这样我们在铺到页面上时使用更加方便了.( 经历此过程也体验了一回写 API 接口的感觉 全是眼泪啊~~~ )</li>
+</ol>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>由于能力有限,存在的问题还有很多，请看到此文的人不吝赐教，感激不尽。</p>
+<p>特别鸣谢:<a href="https://github.com/QC-L" target="_blank" rel="noopener">QC-L老师</a>，<a href="https://github.com/marryyan" target="_blank" rel="noopener">marryyan </a>的帮助.</p>
+<h3 id="未完待续。。。"><a href="#未完待续。。。" class="headerlink" title="未完待续。。。"></a>未完待续。。。</h3><h5 id="参考文章-https-segmentfault-com-a-1190000010736797"><a href="#参考文章-https-segmentfault-com-a-1190000010736797" class="headerlink" title="参考文章:https://segmentfault.com/a/1190000010736797"></a>参考文章:<a href="https://segmentfault.com/a/1190000010736797" target="_blank" rel="noopener">https://segmentfault.com/a/1190000010736797</a></h5>
       
     </div>
     
@@ -328,6 +345,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/puppeteer/" rel="tag"># puppeteer</a>
+          
+        </div>
+      
 
       
       
@@ -337,8 +360,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/12/WebSocket：5分钟从入门到精通/" rel="next" title="WebSocket：5分钟从入门到精通">
-                <i class="fa fa-chevron-left"></i> WebSocket：5分钟从入门到精通
+              <a href="/2018/01/13/关于Array的ES5部分方法的实现/" rel="next" title="关于Array的ES5部分方法的实现">
+                <i class="fa fa-chevron-left"></i> 关于Array的ES5部分方法的实现
               </a>
             
           </div>
@@ -347,8 +370,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/13/NodeJS-学习之路/" rel="prev" title="NodeJS 学习之路">
-                NodeJS 学习之路 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/01/31/React元素和组件/" rel="prev" title="React元素和组件">
+                React元素和组件 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -502,7 +525,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机网络"><span class="nav-number">1.</span> <span class="nav-text">计算机网络</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、HTTP协议头含有哪些重要的部分，HTTP状态码"><span class="nav-number">1.1.</span> <span class="nav-text">一、HTTP协议头含有哪些重要的部分，HTTP状态码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Request-Headers-请求头"><span class="nav-number">1.1.1.</span> <span class="nav-text">Request Headers (请求头)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Response-Header-响应头"><span class="nav-number">1.2.</span> <span class="nav-text">Response Header (响应头)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Cache"><span class="nav-number">1.2.1.</span> <span class="nav-text">Cache :</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP状态码"><span class="nav-number">1.3.</span> <span class="nav-text">HTTP状态码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常见"><span class="nav-number">1.3.1.</span> <span class="nav-text">常见</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍一下Puppeteer"><span class="nav-number">1.</span> <span class="nav-text">介绍一下Puppeteer</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#详情请看Puppeteer官方文档"><span class="nav-number">1.1.</span> <span class="nav-text">详情请看Puppeteer官方文档</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Puppeteer-几个重要功能"><span class="nav-number">1.2.</span> <span class="nav-text">Puppeteer 几个重要功能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Puppeteer-基本用法"><span class="nav-number">1.3.</span> <span class="nav-text">Puppeteer 基本用法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#具体代码"><span class="nav-number">1.4.</span> <span class="nav-text">具体代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#说一下我遇到坑吧"><span class="nav-number">1.5.</span> <span class="nav-text">说一下我遇到坑吧</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结语"><span class="nav-number">2.</span> <span class="nav-text">结语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#未完待续。。。"><span class="nav-number">3.</span> <span class="nav-text">未完待续。。。</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#参考文章-https-segmentfault-com-a-1190000010736797"><span class="nav-number">3.0.1.</span> <span class="nav-text">参考文章:https://segmentfault.com/a/1190000010736797</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

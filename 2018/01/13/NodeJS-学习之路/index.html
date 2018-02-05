@@ -64,7 +64,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="React," />
 
 
 
@@ -75,16 +75,19 @@
 
 
 
-<meta name="description" content="在平坦的道路上曲折前行">
+<meta name="description" content="一 、属性和状态(一)什么是属性？props=properties  1、属性的含义和用法含义 ：一个事物的性质与关系，属性往往是与生俱来的、无法自己改变的。 3种用法 ： (1)键值对 传入一个字符串： 1&apos;Hello,World!&apos; 或 &amp;#123;&apos;Hello,World!&apos;&amp;#125; 传入一个数组： 1&amp;#123;[Array1,Array2,Array3]&amp;#125; 传入一个变量：">
+<meta name="keywords" content="React">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NodeJS 学习之路">
-<meta property="og:url" content="http://yoursite.com/2018/01/13/NodeJS-学习之路/index.html">
+<meta property="og:title" content="React元素和组件">
+<meta property="og:url" content="http://yoursite.com/2018/01/31/React元素和组件/index.html">
 <meta property="og:site_name" content="万事如意">
-<meta property="og:description" content="在平坦的道路上曲折前行">
-<meta property="og:updated_time" content="2018-01-13T03:42:34.156Z">
+<meta property="og:description" content="一 、属性和状态(一)什么是属性？props=properties  1、属性的含义和用法含义 ：一个事物的性质与关系，属性往往是与生俱来的、无法自己改变的。 3种用法 ： (1)键值对 传入一个字符串： 1&apos;Hello,World!&apos; 或 &amp;#123;&apos;Hello,World!&apos;&amp;#125; 传入一个数组： 1&amp;#123;[Array1,Array2,Array3]&amp;#125; 传入一个变量：">
+<meta property="og:image" content="http://p2oiag4fy.bkt.clouddn.com/React.jpeg">
+<meta property="og:updated_time" content="2018-01-31T01:19:15.434Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="NodeJS 学习之路">
-<meta name="twitter:description" content="在平坦的道路上曲折前行">
+<meta name="twitter:title" content="React元素和组件">
+<meta name="twitter:description" content="一 、属性和状态(一)什么是属性？props=properties  1、属性的含义和用法含义 ：一个事物的性质与关系，属性往往是与生俱来的、无法自己改变的。 3种用法 ： (1)键值对 传入一个字符串： 1&apos;Hello,World!&apos; 或 &amp;#123;&apos;Hello,World!&apos;&amp;#125; 传入一个数组： 1&amp;#123;[Array1,Array2,Array3]&amp;#125; 传入一个变量：">
+<meta name="twitter:image" content="http://p2oiag4fy.bkt.clouddn.com/React.jpeg">
 
 
 
@@ -112,7 +115,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/13/NodeJS-学习之路/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/31/React元素和组件/"/>
 
 
 
@@ -178,36 +181,6 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Startseite</a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-user"></i> <br />Über</a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Kategorien</a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archiv</a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-schedule">
-          <a href="/schedule/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />Schedule</a>
         </li>
       
 
@@ -344,6 +317,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/01/13/关于Array的ES5部分方法的实现/" rel="prev" title="关于Array的ES5部分方法的实现">
+                关于Array的ES5部分方法的实现 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -369,6 +346,10 @@
           
 
   
+
+
+
+
 
 
 
@@ -409,16 +390,34 @@
               
                 <div class="site-state-item site-state-posts">
                 
-                  <a href="/archives/">
+                  <a href="/archives">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
               
 
               
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">Kategorien</span>
+                  
+                </div>
+              
 
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">Tags</span>
+                  
+                </div>
               
             </nav>
           
@@ -562,6 +561,8 @@
   
 
 
+
+
   <script type="text/javascript" src="/js/src/utils.js?v=6.0.1"></script>
 
   <script type="text/javascript" src="/js/src/motion.js?v=6.0.1"></script>
@@ -601,9 +602,9 @@
 
 
 
-  
+	
 
-
+	
 
 
 
