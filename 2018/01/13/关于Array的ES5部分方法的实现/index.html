@@ -64,7 +64,7 @@
 
 
 
-  <meta name="keywords" content="技术总结 webpack to8to react," />
+  <meta name="keywords" content="svn," />
 
 
 
@@ -75,17 +75,17 @@
 
 
 
-<meta name="description" content="实战项目总结一 (to8to项目基础配置)webpack 的配置 (@3.11.0)webpack.base.js 文件loader eslint 代码格式规范: eslint-loader  js 处理 js 文件，可以使用 ES6 等高级语法: babel-loader 开发和生产环境都使用了 less: style-loader,css-loader,less-loader  图片处理: u">
-<meta name="keywords" content="技术总结 webpack to8to react">
+<meta name="description" content="svn基本的操作: 流程: 　　你刚刚进入一个新的公司，让你接手一个正在进行的项目，你打开终端写下了：svn co svn://192.168.1.1/pro/domain 然后就可以在当前目录里面找到一个叫domain的项目，cd domain，你浏览了几行代码，太特么的竟然有bug，你忍不住改了，你要提交了，svn ci -m ‘something’  ，成功。你又在domain下得app文件">
+<meta name="keywords" content="svn">
 <meta property="og:type" content="article">
-<meta property="og:title" content="实战项目总结一 (to8to项目基础配置)">
-<meta property="og:url" content="http://yoursite.com/2018/03/18/实战项目总结一 (to8to项目基础配置)/index.html">
+<meta property="og:title" content="svn基本操作">
+<meta property="og:url" content="http://yoursite.com/2018/08/28/svn基本操作/index.html">
 <meta property="og:site_name" content="万事如意">
-<meta property="og:description" content="实战项目总结一 (to8to项目基础配置)webpack 的配置 (@3.11.0)webpack.base.js 文件loader eslint 代码格式规范: eslint-loader  js 处理 js 文件，可以使用 ES6 等高级语法: babel-loader 开发和生产环境都使用了 less: style-loader,css-loader,less-loader  图片处理: u">
-<meta property="og:updated_time" content="2018-03-18T16:16:23.791Z">
+<meta property="og:description" content="svn基本的操作: 流程: 　　你刚刚进入一个新的公司，让你接手一个正在进行的项目，你打开终端写下了：svn co svn://192.168.1.1/pro/domain 然后就可以在当前目录里面找到一个叫domain的项目，cd domain，你浏览了几行代码，太特么的竟然有bug，你忍不住改了，你要提交了，svn ci -m ‘something’  ，成功。你又在domain下得app文件">
+<meta property="og:updated_time" content="2018-08-28T02:31:38.357Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="实战项目总结一 (to8to项目基础配置)">
-<meta name="twitter:description" content="实战项目总结一 (to8to项目基础配置)webpack 的配置 (@3.11.0)webpack.base.js 文件loader eslint 代码格式规范: eslint-loader  js 处理 js 文件，可以使用 ES6 等高级语法: babel-loader 开发和生产环境都使用了 less: style-loader,css-loader,less-loader  图片处理: u">
+<meta name="twitter:title" content="svn基本操作">
+<meta name="twitter:description" content="svn基本的操作: 流程: 　　你刚刚进入一个新的公司，让你接手一个正在进行的项目，你打开终端写下了：svn co svn://192.168.1.1/pro/domain 然后就可以在当前目录里面找到一个叫domain的项目，cd domain，你浏览了几行代码，太特么的竟然有bug，你忍不住改了，你要提交了，svn ci -m ‘something’  ，成功。你又在domain下得app文件">
 
 
 
@@ -113,7 +113,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/18/实战项目总结一 (to8to项目基础配置)/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/28/svn基本操作/"/>
 
 
 
@@ -178,7 +178,7 @@
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Startseite</a>
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
         </li>
       
 
@@ -243,7 +243,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-13T13:30:47+08:00">2018-01-13</time>
             
@@ -384,10 +384,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Inhaltsverzeichnis
+            Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Übersicht
+            Overview
           </li>
         </ul>
       
@@ -412,7 +412,7 @@
                   <a href="/archives">
                 
                     <span class="site-state-item-count">9</span>
-                    <span class="site-state-item-name">Artikel</span>
+                    <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
               
@@ -423,7 +423,7 @@
                 <div class="site-state-item site-state-categories">
                   
                     <span class="site-state-item-count">3</span>
-                    <span class="site-state-item-name">Kategorien</span>
+                    <span class="site-state-item-name">categories</span>
                   
                 </div>
               
@@ -433,8 +433,8 @@
                 
                 <div class="site-state-item site-state-tags">
                   
-                    <span class="site-state-item-count">3</span>
-                    <span class="site-state-item-name">Tags</span>
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">tags</span>
                   
                 </div>
               
