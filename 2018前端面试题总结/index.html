@@ -9,7 +9,7 @@
     <meta name="description" content="A website for A-RSnippet Hexo Theme">
     <meta name="author" content="Yingjie Hu">
     <meta name="keyword" content="hexo, hexo theme, A-RSnippet, responsive, bootstrap">
-    <link rel="canonical" href="http://yoursite.com/categories/React/">
+    <link rel="canonical" href="http://yoursite.com/2018前端面试题总结/">
     <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
     <link rel="alternate" type="application/atom+xml" title="A-RSnippet &lt;a class=&#34;github-button&#34; href=&#34;https://github.com/huyingjie/hexo-theme-A-RSnippet&#34; data-icon=&#34;octicon-star&#34; data-show-count=&#34;true&#34; aria-label=&#34;Star huyingjie/hexo-theme-A-RSnippet on GitHub&#34;&gt;Star&lt;/a&gt;" href="/atom.xml">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -21,7 +21,7 @@
 
     <title>
         
-        An A-RSnippet Hexo Theme
+        2018前端面试题总结｜An A-RSnippet Hexo Theme
         
     </title>
 
@@ -101,7 +101,7 @@
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="" class="animated fadeIn">
 <header>
-  <nav class="navbar navbar-default header-navbar" id="nav-top" data-ispost="false" data-istags="false" data-ishome="false">
+  <nav class="navbar navbar-default header-navbar" id="nav-top" data-ispost="true" data-istags="false" data-ishome="false">
     <div class="container-fluid">
       <div class="navbar-header page-scroll">
         <button type="button" class="navbar-toggle" data-toggle="collapse" aria-expanded="false" data-target="#website_navbar">
@@ -173,8 +173,22 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                     <div class="site-heading">
-                        <h1>Untitled</h1>
+                        <h1>2018前端面试题总结</h1>
                         
+                        
+                          <span class="meta">
+                               <span class="meta-item">Author: Yingjie Hu</span>
+                               <span class="meta-item">Date: Jan 12, 2018</span>
+                               
+                                 <span class="meta-item">Updated On: Jan 12, 2018</span>
+                               
+                          </span>
+                          <div class="tags text-center">
+                              Categories: 
+                          </div>
+                          <div class="tags text-center">
+                              Tags: 
+                          </div>
                         
                     </div>
                 </div>
@@ -186,215 +200,105 @@
 
 
 <!-- Main Content -->
-<style>
-  header.intro-header {
-      background-image: url('/img/sky-clouds-moon-horizon.jpg?h=350&amp;auto=compress&amp;cs=tinysrgb');
-  }
-</style>
-
-<header class="intro-header">
+<!-- post.ejs -->
+<article>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading text-center">
-                    <h1>Archives</h1>
-                    <span class="post-subtitle">Cool?</span>
-                </div>
-            </div>
-        </div>
+      <div class="col-lg-8 col-lg-offset-1 col-sm-9">
+          
+            <div class="text-center"><div class="addthis_inline_share_toolbox">
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5272bc2a7b3c1ddc" async="async"></script>
+</div>
+</div><hr>
+          
+          <div class="subscribe"><a href="http://eepurl.com/dh6iCD" target="_blank">Get Updated for Each Release!</a></div><p>
+          </p><p><img src="http://onh0umlhz.bkt.clouddn.com/0524themetitle.PNG" alt="title"></p>
+<h2 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h2><h3 id="一、HTTP协议头含有哪些重要的部分，HTTP状态码"><a href="#一、HTTP协议头含有哪些重要的部分，HTTP状态码" class="headerlink" title="一、HTTP协议头含有哪些重要的部分，HTTP状态码"></a>一、HTTP协议头含有哪些重要的部分，HTTP状态码</h3><h4 id="Request-Headers-请求头"><a href="#Request-Headers-请求头" class="headerlink" title="Request Headers (请求头)"></a>Request Headers (请求头)</h4><p>Accept : 浏览器可以接受的媒体类型</p>
+<p>Accept-Encoding :  浏览器申明自己接收的编码方法，通常指定压缩方法，是否支持压缩，支持什么压缩方法（gzip，deflate），（注意：这不是只字符编码）</p>
+<p>Accept-Language : 浏览器申明自己接收的语言。 </p>
+<p>User-Agent : 告诉HTTP服务器， 客户端使用的操作系统和浏览器的名称和版本.</p>
+<p>Accept-Charset : 浏览器申明自己接收的字符集，这就是本文前面介绍的各种字符集和字符编码，如gb2312，utf-8（通常我们说Charset包括了相应的字符编码方案）</p>
+<p>Connection :</p>
+<ol>
+<li>Connection: keep-alive   当一个网页打开完成后，客户端和服务器之间用于传输HTTP数据的TCP连接不会关闭，如果客户端再次访问这个服务器上的网页，会继续使用这一条已经建立的连接</li>
+<li>Connection: close  代表一个Request完成后，客户端和服务器之间用于传输HTTP数据的TCP连接会关闭， 当客户端再次发送Request，需要重新建立TCP连接。</li>
+</ol>
+<p>Cookie: :  最重要的header, 将cookie的值发送给HTTP 服务器</p>
+<p>Host : 请求报头域主要用于指定被请求资源的Internet主机和端口号，它通常从HTTP URL中提取出来的</p>
+<p>Referer : 提供了Request的上下文信息的服务器，告诉服务器我是从哪个链接过来的，比如从我主页上链接到一个朋友那里，他的服务器就能够从HTTP Referer中统计出每天有多少用户点击我主页上的链接访问他的网站。</p>
+<h3 id="Response-Header-响应头"><a href="#Response-Header-响应头" class="headerlink" title="Response Header (响应头)"></a>Response Header (响应头)</h3><h4 id="Cache"><a href="#Cache" class="headerlink" title="Cache :"></a>Cache :</h4><p>Date : 生成消息的具体时间和日期</p>
+<p>Expires : 浏览器会在指定过期时间内使用本地缓存</p>
+<p>Content-Encoding : WEB服务器表明自己使用了什么压缩方法（gzip，deflate）压缩响应中的对象。</p>
+<p>Content-Length : 指明实体正文的长度，以字节方式存储的十进制数字来表示。在数据下行的过程中，Content-Length的方式要预先在服务器中缓存所有数据，然后所有数据再一股脑儿地发给客户端。</p>
+<p>Content-Type : WEB服务器告诉浏览器自己响应的对象的类型和字符集,</p>
+<h3 id="HTTP状态码"><a href="#HTTP状态码" class="headerlink" title="HTTP状态码"></a>HTTP状态码</h3><h4 id="常见"><a href="#常见" class="headerlink" title="常见"></a>常见</h4><ul>
+<li>200 - 请求成功</li>
+<li>301 - 资源（网页等）被永久转移到其它URL</li>
+<li>404 - 请求的资源（网页等）不存在</li>
+<li>500 - 内部服务器错误</li>
+</ul>
+<p>1XX : 信息，服务器收到请求，需要请求者继续执行操作</p>
+<p>2XX : 成功，操作被成功接收并处理</p>
+<p>3XX : 重定向，需要进一步的操作以完成请求</p>
+<p>4XX : 客户端错误，请求包含语法错误或无法完成请求</p>
+<p>5XX : 服务器错误，服务器在处理请求的过程中发生了错误</p>
+
+          
+            <a href="https://www.patreon.com/arsnippet" target="_blank"><img src="/img/patreon.png" alt="support my work at patron"></a> <a href="https://arsnippet.freeflarum.com/" target="_blank"><img src="/img/forum.jpg" alt="support my work at patron"></a> <a href="https://discord.gg/CB6CPzq" target="_blank"><img src="/img/discord.png" alt="Join the Discord"></a>
+          
+          <hr>
+          <ul class="pager">
+              
+              <li class="previous">
+                  <a href="/NodeJS-学习之路/" data-toggle="tooltip" data-placement="left" title="NodeJS 学习之路">&larr; Previous Post</a>
+              </li>
+              
+              
+              <li class="next">
+                  <a href="/WebSocket：5分钟从入门到精通/" data-toggle="tooltip" data-placement="top" title="WebSocket：5分钟从入门到精通">Next Post&rarr;</a>
+              </li>
+              
+          </ul>
+        
+  <br>
+  
+  <!-- disqus start -->
+  <div class="comment">
+    <div id="disqus_thread" class="disqus-thread"></div>
+      <script>
+      var disqus_shortname = 'hexo-a-rsnippet';
+      
+      var disqus_url = 'http://yoursite.com/2018前端面试题总结/';
+      
+      (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  <!-- disqus end -->
+  
+
+  
+  
+
+
+        
+  <div class="hidden-xs col-sm-3 toc-col">
+    <div class="toc-wrap">
+        Table of Contents
+        
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#计算机网络"><span class="toc-number">1.</span> <span class="toc-text">计算机网络</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、HTTP协议头含有哪些重要的部分，HTTP状态码"><span class="toc-number">1.1.</span> <span class="toc-text">一、HTTP协议头含有哪些重要的部分，HTTP状态码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Request-Headers-请求头"><span class="toc-number">1.1.1.</span> <span class="toc-text">Request Headers (请求头)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Response-Header-响应头"><span class="toc-number">1.2.</span> <span class="toc-text">Response Header (响应头)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Cache"><span class="toc-number">1.2.1.</span> <span class="toc-text">Cache :</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP状态码"><span class="toc-number">1.3.</span> <span class="toc-text">HTTP状态码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#常见"><span class="toc-number">1.3.1.</span> <span class="toc-text">常见</span></a></li></ol></li></ol></li></ol>
+        
     </div>
-</header>
+  </div>
 
 
-
-<article class="container archive">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          
-                
-                
-                
-                    
-                    
-                    <div data-date="2018">
-                      <span class="fa fa-heart"></span>
-                      <a href="/archives/2018" class="archive-year">2018</a>
-                    </div>
-                
-
-                
-                    
-                    <div class="archive-month" data-date="201811">
-                         11
-                    </div>
-                
-                <div>
-                          <h4>
-                              <span class="archive-post-time">11-07</span>
-                              <span class="archive-post-title">
-                                <a href="/react-native 踩坑及心得体会/" class="archive-post-item">react-native 踩坑及心得体会（持续更新）</a>
-                              </span>
-                          </h4>
-                          
-                </div>
-          
-                
-                
-                
-
-                
-                    
-                    <div class="archive-month" data-date="201808">
-                         08
-                    </div>
-                
-                <div>
-                          <h4>
-                              <span class="archive-post-time">08-28</span>
-                              <span class="archive-post-title">
-                                <a href="/svn基本操作/" class="archive-post-item">svn基本操作</a>
-                              </span>
-                          </h4>
-                          
-                </div>
-          
-                
-                
-                
-
-                
-                    
-                    <div class="archive-month" data-date="201803">
-                         03
-                    </div>
-                
-                <div>
-                          <h4>
-                              <span class="archive-post-time">03-18</span>
-                              <span class="archive-post-title">
-                                <a href="/实战项目总结一 (to8to项目基础配置)/" class="archive-post-item">实战项目总结一 (to8to项目基础配置)</a>
-                              </span>
-                          </h4>
-                          
-                </div>
-          
-                
-                
-                
-
-                
-                    
-                    <div class="archive-month" data-date="201802">
-                         02
-                    </div>
-                
-                <div>
-                          <h4>
-                              <span class="archive-post-time">02-05</span>
-                              <span class="archive-post-title">
-                                <a href="/React-Fiber架构/" class="archive-post-item">React Fiber架构</a>
-                              </span>
-                          </h4>
-                          
-                </div>
-          
-                
-                
-                
-
-                
-                    
-                    <div class="archive-month" data-date="201801">
-                         01
-                    </div>
-                
-                <div>
-                          <h4>
-                              <span class="archive-post-time">01-31</span>
-                              <span class="archive-post-title">
-                                <a href="/React元素和组件/" class="archive-post-item">React元素和组件</a>
-                              </span>
-                          </h4>
-                          
-                </div>
-          
-                
-                
-                
-
-                
-                <div>
-                          <h4>
-                              <span class="archive-post-time">01-20</span>
-                              <span class="archive-post-title">
-                                <a href="/关于puppeteer/" class="archive-post-item">关于puppeteer</a>
-                              </span>
-                          </h4>
-                          
-                </div>
-          
-                
-                
-                
-
-                
-                <div>
-                          <h4>
-                              <span class="archive-post-time">01-13</span>
-                              <span class="archive-post-title">
-                                <a href="/关于Array的ES5部分方法的实现/" class="archive-post-item">关于Array的ES5部分方法的实现</a>
-                              </span>
-                          </h4>
-                          
-                </div>
-          
-                
-                
-                
-
-                
-                <div>
-                          <h4>
-                              <span class="archive-post-time">01-13</span>
-                              <span class="archive-post-title">
-                                <a href="/NodeJS-学习之路/" class="archive-post-item">NodeJS 学习之路</a>
-                              </span>
-                          </h4>
-                          
-                </div>
-          
-                
-                
-                
-
-                
-                <div>
-                          <h4>
-                              <span class="archive-post-time">01-12</span>
-                              <span class="archive-post-title">
-                                <a href="/2018前端面试题总结/" class="archive-post-item">2018前端面试题总结</a>
-                              </span>
-                          </h4>
-                          
-                </div>
-          
-                
-                
-                
-
-                
-                <div>
-                          <h4>
-                              <span class="archive-post-time">01-12</span>
-                              <span class="archive-post-title">
-                                <a href="/WebSocket：5分钟从入门到精通/" class="archive-post-item">WebSocket：5分钟从入门到精通</a>
-                              </span>
-                          </h4>
-                          
-                </div>
-          
-        </div>
-    </div>
+      </div>
+  </div>
 </article>
 
 <!-- Footer -->
