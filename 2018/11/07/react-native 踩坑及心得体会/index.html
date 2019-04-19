@@ -14,11 +14,9 @@
 
     
         <meta name="description" content="react-native 踩坑及心得体会遇到啥写啥
-h.config not found ….
-
-1234cd node_modules/react-native/third-party/glog-0.3.5./configuremakemake install
-
-android 键盘顶开底部导航 ">
+Could not find iPhone X simulator
+Open the file /node_modules/react-native/local-cli/runIOS/findMatchingSimulator.js
+123if (">
     
 
     <!--Author-->
@@ -34,11 +32,9 @@ android 键盘顶开底部导航 ">
     <!--Open Graph Description-->
     
         <meta property="og:description" content="react-native 踩坑及心得体会遇到啥写啥
-h.config not found ….
-
-1234cd node_modules/react-native/third-party/glog-0.3.5./configuremakemake install
-
-android 键盘顶开底部导航 ">
+Could not find iPhone X simulator
+Open the file /node_modules/react-native/local-cli/runIOS/findMatchingSimulator.js
+123if (">
     
 
     <!--Open Graph Site Name-->
@@ -188,7 +184,14 @@ android 键盘顶开底部导航 ">
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <h1 id="react-native-踩坑及心得体会"><a href="#react-native-踩坑及心得体会" class="headerlink" title="react-native 踩坑及心得体会"></a>react-native 踩坑及心得体会</h1><h3 id="遇到啥写啥"><a href="#遇到啥写啥" class="headerlink" title="遇到啥写啥"></a>遇到啥写啥</h3><ul>
-<li>h.config not found ….</li>
+<li><p>Could not find iPhone X simulator</p>
+<p>Open the file <code>/node_modules/react-native/local-cli/runIOS/findMatchingSimulator.js</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!version.startsWith(<span class="string">'iOS'</span>) &amp;&amp; !version.startsWith(<span class="string">'tvOS'</span>)) &#123;</span><br><span class="line">  <span class="keyword">continue</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>修改为</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!version.startsWith(<span class="string">'com.apple.CoreSimulator.SimRuntime.iOS'</span>) &amp;&amp; !version.startsWith(<span class="string">'com.apple.CoreSimulator.SimRuntime.tvOS'</span>)) &#123;</span><br><span class="line">  <span class="keyword">continue</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>h.config not found ….</p>
+</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd node_modules/react-native/third-party/glog-0.3.5</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
 <ul>
@@ -262,7 +265,7 @@ android 键盘顶开底部导航 ">
 
                     
                 </ul>
-                <p class="copyright text-muted">&copy; 2018 John Doe<br></p>
+                <p class="copyright text-muted">&copy; 2019 John Doe<br></p>
                 <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
                 <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
             </div>
